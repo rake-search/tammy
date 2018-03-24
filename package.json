@@ -1,0 +1,28 @@
+{
+  "name": "thamsanqabhala-api",
+  "version": "1.0.0",
+  "description": "API for thamsanqabhala which connects to a MongoDB Atlas account",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node --presets env",
+    "release": "npm run clean && npm run build && npm run serve",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "babel . -s -D -d dist --presets env --ignore node_modules",
+    "serve": "node dist/server.js"
+  },
+  "author": "Wignall, Shane M",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.14.12"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.10"
+  },
+  "engines": {
+    "node": "8.10.0"
+  }
+}
